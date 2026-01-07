@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title> Jaya Gambhir & Elena Martin Final Project </title>
+    </head>
+    <body>
+        <script>
+            //jaya
+            function check(answer,questionAns){
+                if (answer==questionAns){
+                    if (questionLev==1){
+                        points++
+                    }
+                    else if (questionLev==2){
+                        points+=2
+                    }
+                    else if (questionLev==3){
+                        points+=3
+                    }
+                }
+                else if (answer!=questionAns){
+                    points--
+                }
+                
+            }
+            function hard(){
+                //elena
+                let hardQ = []
+                let ansH= []
+            }
+            function medium(){
+                //elena
+                let mediumQ = ["1. Which two states are not connected to the other states?", "2. Which state does not observe daylight savings time?", "3. Which river system is the longest in the U.S.?", "4. Which state was once an independent republic?", "5. Which state became a state during the Gold Rush?", "6. Which state is called the \"Land of Lincoln \" ?", "7. Which state has the highest population density?", "8. Which state was the first to allow women to vote?",
+                     "9. What does Louisiana call its counties?" , "10. Which state is made of two peninsulas?", "11. Which state has produced the most U.S. presidents?", "12. What ocean borders Guam?", "13. What is unique about people born in American Samoa?", "14. Which state is called the \“Mother of Presidents\”?", "15. Which state has the highest average elevation?"
+                ]
+                let ansM= ["1. alaska and hawaii", "2. arizona", "3. the mississippi river system", "4. vermont","5. california", "6. illinois","7. new jersey", "8. wyoming", "9. parishes", "10. michigan", "11. ohio", "12. pacific ocean", "13. are u.s. nationals, not full citizens at birth", "14. virginia", "15. colorado"]
+            }
+            function easy(){
+                //jaya
+                let easyQ = ["1. How many U.S. states are there?","2. What is the largest U.S.state by land area?","3. What is the smallest U.S. state?","4. Which state has the largest population?","5. What was the first state to join the United States?","6. Which state is made up entirely of islands?","7. Which state used to be its own country?","8. What is the capital of New York State?","9. Is Washington, D.C. a state?","10. How many stars are on the U.S. flag?","11. Which state is known for having many beaches?","12. Do all states have a state flag?","13. Which state is mostly desert?","14. Which state has more cows than people?"]
+                let ansE = ["1. 50","2. alaska","3. rhode island","4. california","5. delaware","6. hawaii","7. texas","8. albany","9. no","10. 50","11. florida","12. yes","13. nevada","14. montana"]
+            }
+            //jaya    
+            alert("Welcome To United States Trivia!")
+            alert("Here are the rules of our game. You will pick a dificulty level 1, level 2 or level 3. Then baced on your choice you will get a fact and you have to guess the U.S. state or teritorry.\n If you get it correct you will get points:\nlevel 3:3 points\nlevel 2:2 points\nlevel 1: 1 point \nIf you get the question wrong you get 1 point taken away. Your will answer with no capitals.")
+            let points = 0
+            let questionLev = prompt("What level would you like your first question to be:\n3\n2\n1")
+            if (questionLev==quit || questionLev==Quit){
+
+            }
+            else{
+                parseInt(questionLev)
+            }
+            while (points>=0 && (questionLev != "quit" || questionLev != "Quit")){
+                if (questionLev==1){
+                    easy()
+                    check(answer,questionAns)
+                }
+                else if (questionLev==2){
+                    medium()
+                    check(answer,questionAns)
+                }
+                else if (questionLev==3){
+                    hard()
+                    check(answer,questionAns)
+                }  
+                questionLev = (prompt("What level would you like your question to be:\n3\n2\n1\nOr would you like to quit"))       
+            }
+        </script>
+    </body>
+</html>
