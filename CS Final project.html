@@ -26,6 +26,9 @@
                 else if (answer!=questionAns){
                     points--
                 }
+
+
+                function double()
                 
             }
             function hard(){
@@ -64,6 +67,10 @@
             let ansM= []
             let easyQ=[]
             let ansE= []
+            //elena
+            let DON=0
+            let qExt=[]
+            let aExt=[]
             //jaya
             while (points>=0 && (questionLev != "quit" || questionLev != "Quit")){
                 if (questionLev==1){
@@ -88,6 +95,13 @@
                 else{
                     parseInt(questionLev)
                 }    
+//elena
+                if(points%3==0){
+                    DON= prompt("You have reached "+points+" , would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \n take it, leave it");
+                    if (DON== "take it"){
+                        
+                    }
+                }
             }
         </script>
     </body>
