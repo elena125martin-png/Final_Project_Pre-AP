@@ -4,7 +4,6 @@
     </head>
     <body>
         <script>
-            //jaya math.random easy elena math.randon med and hard
             //jaya
             function check(answer,questionAns){
                 if (answer==questionAns){
@@ -42,7 +41,8 @@
                 let x = Math.floor(Math.random()*14)
                 let question = easyQ[x]
                 let questionAns = ansE[x]
-                easyQ.splice()
+                easyQ.splice(x,1)
+                ansE.splice(x,1)
             }
 
             //jaya    
