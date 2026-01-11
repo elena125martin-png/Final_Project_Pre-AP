@@ -32,21 +32,32 @@
                 
             }
             function hard(){
-                //elena math.random
-                hardQ = []
-                ansH= []
+                //elena 
+                hardQ = ["1. Which state has a one-house legislature?", "2. Which U.S. state is closest to Africa?", "3. Which state has more coastline than all others combined?", "4. Which state has the most caves?", "5. Which state has no natural lakes?", "6. Which state grows coffee commercially?", "7. Which state was part of the Louisiana Purchase?", "8. What U.S. territory is a commonwealth in the Pacific?", "9. Which state has the largest saltwater lake in the Western Hemisphere?", "10. What is the oldest state capital in the U.S.?", "11. Which state was once known as Indian Territory?", "12. Which state became a state during the Civil War?", "13. Which U.S. territory was purchased from Denmark?", "14. Which state has no official state language?"]
+                ansH= ["nebraska", "maine", "alaska", "kentucky", "maryland", "hawaii", "south dakota", "the northern mariana islands", "utah", "santa fe, new mexico", "oklahoma", "west virginia", "the u.s. virgin islands", "pennsylvania"]
+                let num= parseInt(Math.random()*14)+1
+                question = hardQ[num]
+                questionAns = ansH[num]
+
+
+
             }
             function medium(){
-                //elena math.random
+                //elena 
                 mediumQ = ["1. Which two states are not connected to the other states?", "2. Which state does not observe daylight savings time?", "3. Which river system is the longest in the U.S.?", "4. Which state was once an independent republic?", "5. Which state became a state during the Gold Rush?", "6. Which state is called the \"Land of Lincoln \" ?", "7. Which state has the highest population density?", "8. Which state was the first to allow women to vote?",
                      "9. What does Louisiana call its counties?" , "10. Which state is made of two peninsulas?", "11. Which state has produced the most U.S. presidents?", "12. What ocean borders Guam?", "13. What is unique about people born in American Samoa?", "14. Which state is called the \“Mother of Presidents\”?", "15. Which state has the highest average elevation?"
                 ]
-                ansM= ["1. alaska and hawaii", "2. arizona", "3. the mississippi river system", "4. vermont","5. california", "6. illinois","7. new jersey", "8. wyoming", "9. parishes", "10. michigan", "11. ohio", "12. pacific ocean", "13. are u.s. nationals, not full citizens at birth", "14. virginia", "15. colorado"]
+                ansM= ["alaska and hawaii", "arizona", "the mississippi river system", "vermont","california", "illinois","new jersey", "wyoming", "parishes", "michigan", "ohio", "pacific ocean", "are u.s. nationals, not full citizens at birth", "virginia", "colorado"]
+                let num = parseInt (Math.random()*15)+1
+                question = mediumQ[num]
+                questionAns = ansM[num]
+
+
             }
             function easy(){
                 //jaya
                 easyQ = ["1. How many U.S. states are there?","2. What is the largest U.S.state by land area?","3. What is the smallest U.S. state?","4. Which state has the largest population?","5. What was the first state to join the United States?","6. Which state is made up entirely of islands?","7. Which state used to be its own country?","8. What is the capital of New York State?","9. Is Washington, D.C. a state?","10. How many stars are on the U.S. flag?","11. Which state is known for having many beaches?","12. Do all states have a state flag?","13. Which state is mostly desert?","14. Which state has more cows than people?"]
-                ansE = ["1. 50","2. alaska","3. rhode island","4. california","5. delaware","6. hawaii","7. texas","8. albany","9. no","10. 50","11. florida","12. yes","13. nevada","14. montana"]
+                ansE = ["50","alaska","rhode island","california","delaware","hawaii","texas","albany","no","50","florida","yes","nevada","montana"]
                 let x = Math.floor(Math.random()*14)
                 question = easyQ[x]
                 questionAns = ansE[x]
@@ -69,9 +80,9 @@
             let ansE= []
             //elena
             let DON=0
-            let qExt=[]
+            let qExt=["1. Which U.S. state is the only one to produce maple syrup commercially outside of the Northeast?", "2. Which U.S. state has a city named \“Truth or Consequences\"?", "3. What U.S. state has more lakes than any other?", "4. Which U.S. state has the only diamond mine open to the public?", "5. Which U.S. state\'s official animal is the honeybee?", "6. Which state has a town called \“Chicken\”?", "7. Which state is the only one to have an official state microbe?", "8. Which U.S. state produces the most cranberries?", "9. Which U.S. state has a \“Carhenge,\” a replica of England\'s Stonehenge made of cars?", "10. Which U.S. state has the shortest river in the world, the Roe River?", "11. Which state has the only royal palace in the United States?", "12. Which U.S. state was originally founded as a colony for debtors?", "13. Which U.S. state has a town named \“Why\”?", "14. Which U.S. state was the last to officially recognize Christmas as a holiday?", "15. Which U.S. state is the only one that grows wild bananas?"]
             //jaya
-            let aExt=["1.Michigan","2.New Mexico","3.Minnesota","4.Arkansas","5.Kansas","6.Alaska","7.Wisconsin (Lactococcus lactis)","8.Wisconsin","9.Nebraska","10.Montana","11.Hawaii","12.Georgia","13.Arizona","14.Oklahoma","15.Florida"]
+            let aExt=["michigan","new Mexico","minnesota","arkansas","kansas","alaska","wisconsin (lactococcus lactis)","wisconsin","nebraska","montana","hawaii","georgia","arizona","oklahoma","florida"]
             //jaya
             while (points>=0 && (questionLev != "quit" || questionLev != "Quit")){
                 if (questionLev==1){
@@ -96,7 +107,7 @@
                 else{
                     parseInt(questionLev)
                 }    
-//elena
+                //elena
                 if(points%3==0){
                     DON= prompt("You have reached "+points+" , would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \n take it, leave it");
                     if (DON== "take it"){
