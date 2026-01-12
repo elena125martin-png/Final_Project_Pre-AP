@@ -41,12 +41,15 @@
                     answer=prompt(question + "dont forget to not use capitals")
 
                     //elena
-                function doublepoints(points,question,questionAns){
+                function doublepointsCheck(points,question,questionAns){
                     if (answer == questionAns){
                         points= points*2
+                        alert("Congradulations\nDoubled your points")
+                        alert("Will your knowlage continue to keep you alive")
                         
                     }else{
                         points = 0
+                        alert("Hahaha back to where you started")
                     }
 
                     
@@ -129,7 +132,9 @@
                     hardQ.splice(x,1)
                     ansH.splice(x,1)
                 }  
-                questionLev = (prompt("You now have " + points + " points. \nWhat level would you like your question to be:\n3\n2\n1\nOr would you like to quit")) 
+                if (points>0){
+                    questionLev = (prompt("You now have " + points + " points. \nWhat level would you like your question to be:\n3\n2\n1\nOr would you like to quit")) 
+                }
                 if (questionLev== "quit" || questionLev== "Quit"){
 
                 }
@@ -142,15 +147,19 @@
                     if (DON== "take it"){   
                         double()
                         answer = prompt("Your answer *remember not to use capitals*")
-                        points = doublepoints(points,answer,questionAns)
+                        points = doublepointsCheck(points,answer,questionAns)
                     }else{
                         alert("You can't stay safe forever...")
+                
 
                     }
 
                         
                     
                 }
+            }
+            if (points<0){
+                alert("You lost!!")
             }
         </script>
     </body>
