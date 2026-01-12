@@ -22,6 +22,8 @@
                 if (answer!=questionAns){
                     points-=2
                 }
+
+                return points
             }
 
                 //elena
@@ -109,19 +111,19 @@
             while (points>=0 && !(isNaN(questionLev))){
                 if (questionLev==1){
                     easy()
-                    check(answer,questionAns,points)
+                    ponits = check(answer,questionAns,points)
                     easyQ.splice(x,1)
                     ansE.splice(x,1)
                 }
                 if (questionLev==2){
                     medium()
-                    check(answer,questionAns,points)
+                    points= check(answer,questionAns,points)
                     mediumQ.splice(x,1)
                     ansM.splice(x,1)
                 }
                 if (questionLev==3){
                     hard()
-                    check(answer,questionAns,points)
+                    points = check(answer,questionAns,points)
                     hardQ.splice(x,1)
                     ansH.splice(x,1)
                 }  
