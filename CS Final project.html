@@ -78,7 +78,7 @@
 
             //jaya    
             alert("Welcome To United States Trivia!")
-            alert("Here are the rules of our game. You will pick a dificulty level 1, level 2 or level 3. Then baced on your choice you will get a fact and you have to guess the U.S. state or teritorry.\n If you get it correct you will get points:\nlevel 3:5 points\nlevel 2:3 points\nlevel 1: 1 point \nIf you get the question wrong you get 2 point taken away. Your will answer with no capitals if you dont it will count as wrong.")
+            alert("Here are the rules of our game. You will pick a dificulty level 1, level 2 or level 3. Then based on your choice you will get a fact and you have to guess the U.S. state or teritorry.\nIf you get it correct you will get points:\nlevel 3 : 5 points\nlevel 2 : 3 points\nlevel 1 : 1 point \nIf you get the question wrong you get 2 point taken away. Your will answer with no capitals if you dont it will count as wrong.")
             let points = 0
             let questionLev = parseInt(prompt("What level would you like your first question to be:\n3\n2\n1"))
             let question =""
@@ -103,11 +103,17 @@
                 }
                 else if (questionLev==2){
                     medium()
+                    //elena
+                    alert(question)
+                    //jaya
                     let answer = prompt("Your answer *remember not to use capitals*")
                     check(answer,questionAns)
                 }
                 else if (questionLev==3){
                     hard()
+                    //elena
+                    alert(question)
+                    //jaya
                     let answer = prompt("Your answer *remember not to use capitals*")
                     check(answer,questionAns)
                 }  
