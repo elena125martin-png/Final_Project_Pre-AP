@@ -32,11 +32,12 @@
                 function double(){
                     qExt=["1. Which U.S. state is the only one to produce maple syrup commercially outside of the Northeast?", "2. Which U.S. state has a city named \“Truth or Consequences\"?", "3. What U.S. state has more lakes than any other?", "4. Which U.S. state has the only diamond mine open to the public?", "5. Which U.S. state\'s official animal is the honeybee?", "6. Which state has a town called \“Chicken\”?", "7. Which state is the only one to have an official state microbe?", "8. Which U.S. state produces the most cranberries?", "9. Which U.S. state has a \“Carhenge,\” a replica of England\'s Stonehenge made of cars?", "10. Which U.S. state has the shortest river in the world, the Roe River?", "11. Which state has the only royal palace in the United States?", "12. Which U.S. state was originally founded as a colony for debtors?", "13. Which U.S. state has a town named \“Why\”?", "14. Which U.S. state was the last to officially recognize Christmas as a holiday?", "15. Which U.S. state is the only one that grows wild bananas?"]
                     //jaya
-                    aExt=["michigan","new Mexico","minnesota","arkansas","kansas","alaska","wisconsin (lactococcus lactis)","wisconsin","nebraska","montana","hawaii","georgia","arizona","oklahoma","florida"]
+                    aExt=["michigan","new mexico","minnesota","arkansas","kansas","alaska","wisconsin (lactococcus lactis)","wisconsin","nebraska","montana","hawaii","georgia","arizona","oklahoma","florida"]
                     //elena
                     let x= parseInt(Math.random()*15)
                     question = qExt[x]
                     questionAns = aExt[x]
+                    answer = prompt( question + " * don't use capitals *")
                     //jaya
                     answer=prompt(question + "dont forget to not use capitals")
 
@@ -146,7 +147,6 @@
                     DON= prompt("You have reached "+points+" , would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \n take it, leave it");
                     if (DON== "take it"){   
                         double()
-                        answer = prompt("Your answer *remember not to use capitals*")
                         points = doublepointsCheck(points,answer,questionAns)
                     }else{
                         alert("You can't stay safe forever...")
