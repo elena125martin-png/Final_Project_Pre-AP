@@ -52,7 +52,7 @@
                 let x= parseInt(Math.random()*14)
                 question = hardQ[x]
                 questionAns = ansH[x]
-                let answer = prompt(question + " * don't use capitals *")
+                answer = prompt(question + " * don't use capitals *")
                 
 
 
@@ -67,7 +67,7 @@
                 let x = parseInt (Math.random()*15)
                 question = mediumQ[x]
                 questionAns = ansM[x]
-                let answer = prompt( question + " * don't use capitals *")
+                answer = prompt( question + " * don't use capitals *")
 
 
 
@@ -126,7 +126,6 @@
                     DON= prompt("You have reached "+points+" , would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \n take it, leave it");
                     if (DON== "take it"){   
                         double()
-                        let answer = prompt("Your answer *remember not to use capitals*")
                         points = doublepoints(points,answer,questionAns)
                     }else{
                         alert("You can't stay safe forever...")
