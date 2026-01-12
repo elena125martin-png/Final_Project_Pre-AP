@@ -37,9 +37,9 @@
                     let x= parseInt(Math.random()*15)
                     question = qExt[x]
                     questionAns = aExt[x]
-                    answer = prompt( question + " * don't use capitals *")
                     //jaya
-                    answer=prompt(question + "dont forget to not use capitals")
+                    answer = prompt( question + " * don't use capitals *")
+                }
 
                     //elena
                 function doublepointsCheck(points,question,questionAns){
@@ -47,16 +47,14 @@
                         points= points*2
                         alert("Congradulations\nDoubled your points")
                         alert("Will your knowlage continue to keep you alive")
-                        
                     }else{
                         points = 0
                         alert("Hahaha back to where you started")
                     }
-
-                    
+                    return points   
                 }
                 
-            }
+            
             function hard(){
                 //elena 
                 hardQ = ["1. Which state has a one-house legislature?", "2. Which U.S. state is closest to Africa?", "3. Which state has more coastline than all others combined?", "4. Which state has the most caves?", "5. Which state has no natural lakes?", "6. Which state grows coffee commercially?", "7. Which state was part of the Louisiana Purchase?", "8. What U.S. territory is a commonwealth in the Pacific?", "9. Which state has the largest saltwater lake in the Western Hemisphere?", "10. What is the oldest state capital in the U.S.?", "11. Which state was once known as Indian Territory?", "12. Which state became a state during the Civil War?", "13. Which U.S. territory was purchased from Denmark?", "14. Which state has no official state language?"]
@@ -66,9 +64,6 @@
                 questionAns = ansH[x]
                 answer = prompt(question + " * don't use capitals *")
                 
-
-
-
             }
             function medium(){
                 //elena 
@@ -144,14 +139,16 @@
                 }    
                 //elena
                 if(points%3==0 && points != 0){
-                    DON= prompt("You have reached "+points+" , would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \n take it, leave it");
+                    DON= prompt("You have reached "+points+" points, would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \n take it, leave it");
                     if (DON== "take it"){   
                         double()
                         points = doublepointsCheck(points,answer,questionAns)
                     }else{
-                        alert("You can't stay safe forever...")
-                
-
+                        //jaya
+                        alert("You can't stay safe forever.")
+                        if (points>0){
+                            questionLev = (prompt("You now have " + points + " points. \nWhat level would you like your question to be:\n3\n2\n1\nOr would you like to quit")) 
+                        }
                     }
 
                         
