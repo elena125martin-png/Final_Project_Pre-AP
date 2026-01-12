@@ -50,6 +50,8 @@
                 let x= parseInt(Math.random()*14)
                 question = hardQ[x]
                 questionAns = ansH[x]
+                let answer = prompt(question + " * don't use capitals *")
+                
 
 
 
@@ -63,6 +65,8 @@
                 let x = parseInt (Math.random()*15)
                 question = mediumQ[x]
                 questionAns = ansM[x]
+                let answer = prompt( question + " * don't use capitals *")
+
 
 
             }
@@ -102,18 +106,10 @@
                 }
                 else if (questionLev==2){
                     medium()
-                    //elena
-                    alert(question)
-                    //jaya
-                    let answer = prompt("Your answer *remember not to use capitals*")
                     check(answer,questionAns)
                 }
                 else if (questionLev==3){
                     hard()
-                    //elena
-                    alert(question)
-                    //jaya
-                    let answer = prompt("Your answer *remember not to use capitals*")
                     check(answer,questionAns)
                 }  
                 questionLev = (prompt("What level would you like your question to be:\n3\n2\n1\nOr would you like to quit")) 
