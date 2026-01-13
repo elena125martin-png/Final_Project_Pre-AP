@@ -21,7 +21,7 @@
             let hardQ = ["1. Which state has a one-house legislature?", "2. Which U.S. state is closest to Africa?", "3. Which state has more coastline than all others combined?", "4. Which state has the most caves?", "5. Which state has no natural lakes?", "6. Which state grows coffee commercially?", "7. Which state was part of the Louisiana Purchase?", "8. What U.S. territory is a commonwealth in the Pacific?", "9. Which state has the largest saltwater lake in the Western Hemisphere?", "10. What is the oldest state capital in the U.S.?", "11. Which state was once known as Indian Territory?", "12. Which state became a state during the Civil War?", "13. Which U.S. territory was purchased from Denmark?", "14. Which state has no official state language?"]
             let ansH= ["nebraska", "maine", "alaska", "kentucky", "maryland", "hawaii", "south dakota", "the northern mariana islands", "utah", "santa fe, new mexico", "oklahoma", "west virginia", "the u.s. virgin islands", "pennsylvania"]
             let mediumQ = ["1. Which two states are not connected to the other states?", "2. Which state does not observe daylight savings time?", "3. Which river system is the longest in the U.S.?", "4. Which state was once an independent republic?", "5. Which state became a state during the Gold Rush?", "6. Which state is called the \"Land of Lincoln \" ?", "7. Which state has the highest population density?", "8. Which state was the first to allow women to vote?","9. What does Louisiana call its counties?" , "10. Which state is made of two peninsulas?", "11. Which state has produced the most U.S. presidents?", "12. What ocean borders Guam?",  "13. Which state is called the \“Mother of Presidents\”?", "14. Which state has the highest average elevation?"]
-            let ansM= ["alaska and hawaii", "arizona", "the mississippi river system", "vermont","california", "illinois","new jersey", "wyoming", "parishes", "michigan", "ohio", "pacific ocean", "virginia", "colorado"]
+            let ansM= ["alaska and hawaii", "arizona", "mississippi river", "vermont","california", "illinois","new jersey", "wyoming", "parishes", "michigan", "ohio", "pacific ocean", "virginia", "colorado"]
             //jaya
             let easyQ = ["1. How many U.S. states are there?","2. What is the largest U.S.state by land area?","3. What is the smallest U.S. state?","4. Which state has the largest population?","5. What was the first state to join the United States?","6. Which state is made up entirely of islands?","7. Which state used to be its own country?","8. What is the capital of New York State?","9. Is Washington, D.C. a state?","10. How many stars are on the U.S. flag?","11. Which state is known for having many beaches?","12. Do all states have a state flag?","13. Which state is mostly desert?","14. Which state has more cows than people?"]
             let ansE = ["50","alaska","rhode island","california","delaware","hawaii","texas","albany","no","50","florida","yes","nevada","montana"]
@@ -136,12 +136,12 @@
                     questionLev=parseInt(questionLev)
                 }    
                 //elena
-                if(points%3==0 && points != 0){
-                    DON= prompt("You have reached "+points+" points, would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \n take it, leave it");
+                if(points%4==0 && points != 0){
+                    DON = prompt("You have reached "+points+" points, would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \ntake it or leave it");
                     if (DON == "take it"){   
                         double()
                         points = doublepointsCheck(points,answer,questionAns)
-                    }else if (DON == "leave it"){
+                    }else{
                         alert("You can't stay safe forever.")
                     }  
                 }
