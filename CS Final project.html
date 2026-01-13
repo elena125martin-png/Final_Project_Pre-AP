@@ -32,6 +32,7 @@
             let aExt=["michigan","new mexico","minnesota","arkansas","kansas","alaska","wisconsin (lactococcus lactis)","wisconsin","nebraska","montana","hawaii","georgia","arizona","oklahoma","florida"]
 
             //jaya
+            //this is the fuction that checks if there answer is correct
             function check(answer,questionAns,points){
                 if (answer==questionAns){
                     if (questionLev==1){
@@ -55,7 +56,6 @@
 
                 return points
             }
-
                 function double(){
                     //jaya
                     x= parseInt(Math.random()*qExt.length)
@@ -79,16 +79,17 @@
                     return points   
                 }
                 
-            
+            //this is the functions for if the user picks level 3
             function hard(){
                 //jaya 
                 x = parseInt(Math.random()*hardQ.length)
                 //elena
                 question = hardQ[x]
                 questionAns = ansH[x]
-                answer = prompt(question + " * don't use capitals *")
-                
+                answer = prompt(question + " * don't use capitals *") 
             }
+
+            //this is the functions for if the user picks level 2
             function medium(){
                 //jaya 
                 x = parseInt (Math.random()*mediumQ.length)
@@ -96,10 +97,9 @@
                 question = mediumQ[x]
                 questionAns = ansM[x]
                 answer = prompt( question + " * don't use capitals *")
-
-
-
             }
+
+            //this is the functions for if the user picks level 1
             function easy(){
                 //jaya
                 x = Math.floor(Math.random()*easyQ.length)
@@ -111,6 +111,7 @@
             }
 
             //jaya  
+            //this is the main while loop that calls all of the fuctions and is the back bone for our game 
             while (points>=0 && !(isNaN(questionLev))){
                 if (questionLev==1){
                     easy()
