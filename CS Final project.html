@@ -138,6 +138,7 @@
                 //elena
                 if(points%4==0 && points != 0){
                     DON = prompt("You have reached "+points+" points, would you like to double the danger? \n You have the rare chance to double or nothing your score. Are you willing to take the chance? \ntake it or leave it");
+                    DON.toLowerCase().trim()
                     if (DON == "take it"){   
                         double()
                         points = doublepointsCheck(points,answer,questionAns)
